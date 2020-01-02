@@ -3,33 +3,46 @@
     <div
       :class="{
         'black-hawk__backgound': true,
+        'black-hawk__backgound--first': true,
         'black-hawk__backgound--active': contentEnterFlag[1],
       }"
-      style="backgroundImage: url('https://udn.com/newmedia/cms_assets/black_hawk/imgs/Web_1.jpg')"
+      :style="{
+        backgroundImage: isMob ? 'url(https://udn.com/newmedia/cms_assets/black_hawk/imgs/mob_1.jpg)' : 'url(https://udn.com/newmedia/cms_assets/black_hawk/imgs/Web_1.jpg)}'
+      }"
     />
     <div
       :class="{
         'black-hawk__backgound': true,
         'black-hawk__backgound--active': contentEnterFlag[2],
       }"
-      style="backgroundImage: url('https://udn.com/newmedia/cms_assets/black_hawk/imgs/Web_2.jpg')"
+      :style="{
+        backgroundImage: isMob ? 'url(https://udn.com/newmedia/cms_assets/black_hawk/imgs/mob_2.jpg)' : 'url(https://udn.com/newmedia/cms_assets/black_hawk/imgs/Web_2.jpg)}'
+      }"
     />
     <div
       :class="{
         'black-hawk__backgound': true,
         'black-hawk__backgound--active': contentEnterFlag[3],
       }"
-      style="backgroundImage: url('https://udn.com/newmedia/cms_assets/black_hawk/imgs/Web_3.jpg')"
+      :style="{
+        backgroundImage: isMob ? 'url(https://udn.com/newmedia/cms_assets/black_hawk/imgs/mob_3.jpg)' : 'url(https://udn.com/newmedia/cms_assets/black_hawk/imgs/Web_3.jpg)}'
+      }"
     />
     <div
       :class="{
         'black-hawk__backgound': true,
         'black-hawk__backgound--active': contentEnterFlag[4],
       }"
-      style="backgroundImage: url('https://udn.com/newmedia/cms_assets/black_hawk/imgs/Web_4.jpg')"
+      :style="{
+        backgroundImage: isMob ? 'url(https://udn.com/newmedia/cms_assets/black_hawk/imgs/mob_4.jpg)' : 'url(https://udn.com/newmedia/cms_assets/black_hawk/imgs/Web_4.jpg)}'
+      }"
     />
     <div ref="content1" class="black-hawk__content black-hawk__content--first-child">
-      <img ref="content1_img" class="content1_img" src="https://udn.com/newmedia/cms_assets/black_hawk/imgs/Web_1.jpg" alt="">
+      <img
+        ref="content1_img"
+        class="content1_img" 
+        :src="isMob ? 'https://udn.com/newmedia/cms_assets/black_hawk/imgs/mob_1.jpg' : 'https://udn.com/newmedia/cms_assets/black_hawk/imgs/Web_1.jpg'" alt=""
+      >
       <div class="black-hawk__content__text-wrapper">
         <p>機號933、空軍UH-60M黑鷹直升機從松山機場起飛，預計前往宜蘭東澳營區執行春節慰勉行程。</p>
       </div>
@@ -66,6 +79,11 @@ export default {
         4: false
       }
     };
+  },
+  computed: {
+    isMob() {
+      return window.innerWidth < 769 ? true : false;
+    }
   },
   methods: {
     handleScroll() {
@@ -107,11 +125,6 @@ export default {
       this.handleScroll();
     });
   },
-  computed: {
-    isMob() {
-      return window.innerWidth < 769 ? true : false;
-    }
-  }
 }
 </script>
 
@@ -129,10 +142,13 @@ export default {
   height: 100vh;
   background-size: cover;
   opacity: 0;
-  /* transition: .5s ease-in-out; */
+  transition: .5s ease-in-out;
 }
 .black-hawk__backgound--active {
   opacity: 1;
+}
+.black-hawk__backgound--first {
+  transition: none;
 }
 .black-hawk__content {
   /* border: solid 1px red; */
