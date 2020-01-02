@@ -29,6 +29,7 @@
       style="backgroundImage: url('https://udn.com/newmedia/cms_assets/black_hawk/imgs/Web_4.jpg')"
     />
     <div ref="content1" class="black-hawk__content">
+      <img ref="content1_img" class="content1_img" src="https://udn.com/newmedia/cms_assets/black_hawk/imgs/Web_1.jpg" alt="">
       <div class="black-hawk__content__text-wrapper">
         <p>寒 雨 連 江 夜 入 吳</p>
         <p>平 明 送 客 楚 山 孤</p>
@@ -82,11 +83,14 @@ export default {
       const content_2 = this.$refs.content2.getBoundingClientRect();
       const content_3 = this.$refs.content3.getBoundingClientRect();
       const content_4 = this.$refs.content4.getBoundingClientRect();
+      const content1_img = this.$refs.content1_img
 
       if (content_1.top < 0 && content_1.bottom > 0) {
         this.contentEnterFlag[1] = true;
+        content1_img.style.display = "none";
       } else {
         this.contentEnterFlag[1] = false;
+        content1_img.style.display = "block";
       }
 
       if (content_2.top < 0 && content_2.bottom > 0) {
@@ -144,15 +148,21 @@ export default {
   justify-content: center;
   align-items: center;
 }
-/* .black-hawk__content:first-child {
+.black-hawk__content:first-child {
   align-items: center;
 }
 .black-hawk__content:last-child {
   margin-bottom: 50vh;
   padding-bottom: 50vh;
-} */
+}
 .black-hawk__content__text-wrapper {
   position: relative;
   background-color: #ffffff;
+}
+.content1_img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 </style>
