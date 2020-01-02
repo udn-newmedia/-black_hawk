@@ -7,7 +7,7 @@
         'black-hawk__backgound--active': contentEnterFlag[1],
       }"
       :style="{
-        backgroundImage: isMob ? 'url(https://udn.com/newmedia/cms_assets/black_hawk/imgs/mob_1.jpg)' : 'url(https://udn.com/newmedia/cms_assets/black_hawk/imgs/Web_1.jpg)}'
+        backgroundImage: isMob ? 'url(https://udn.com/newmedia/cms_assets/black_hawk/imgs/mob_1.jpg)' : 'url(https://udn.com/newmedia/cms_assets/black_hawk/imgs/Web_1.jpg)'
       }"
     />
     <div
@@ -16,7 +16,7 @@
         'black-hawk__backgound--active': contentEnterFlag[2],
       }"
       :style="{
-        backgroundImage: isMob ? 'url(https://udn.com/newmedia/cms_assets/black_hawk/imgs/mob_2.jpg)' : 'url(https://udn.com/newmedia/cms_assets/black_hawk/imgs/Web_2.jpg)}'
+        backgroundImage: isMob ? 'url(https://udn.com/newmedia/cms_assets/black_hawk/imgs/mob_2.jpg)' : 'url(https://udn.com/newmedia/cms_assets/black_hawk/imgs/Web_2.jpg)'
       }"
     />
     <div
@@ -25,7 +25,7 @@
         'black-hawk__backgound--active': contentEnterFlag[3],
       }"
       :style="{
-        backgroundImage: isMob ? 'url(https://udn.com/newmedia/cms_assets/black_hawk/imgs/mob_3.jpg)' : 'url(https://udn.com/newmedia/cms_assets/black_hawk/imgs/Web_3.jpg)}'
+        backgroundImage: isMob ? 'url(https://udn.com/newmedia/cms_assets/black_hawk/imgs/mob_3.jpg)' : 'url(https://udn.com/newmedia/cms_assets/black_hawk/imgs/Web_3.jpg)'
       }"
     />
     <div
@@ -34,7 +34,7 @@
         'black-hawk__backgound--active': contentEnterFlag[4],
       }"
       :style="{
-        backgroundImage: isMob ? 'url(https://udn.com/newmedia/cms_assets/black_hawk/imgs/mob_4.jpg)' : 'url(https://udn.com/newmedia/cms_assets/black_hawk/imgs/Web_4.jpg)}'
+        backgroundImage: isMob ? 'url(https://udn.com/newmedia/cms_assets/black_hawk/imgs/mob_4.jpg)' : 'url(https://udn.com/newmedia/cms_assets/black_hawk/imgs/Web_4.jpg)'
       }"
     />
     <div ref="content1" class="black-hawk__content black-hawk__content--first-child">
