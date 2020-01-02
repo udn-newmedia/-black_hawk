@@ -31,34 +31,24 @@
     <div ref="content1" class="black-hawk__content black-hawk__content--first-child">
       <img ref="content1_img" class="content1_img" src="https://udn.com/newmedia/cms_assets/black_hawk/imgs/Web_1.jpg" alt="">
       <div class="black-hawk__content__text-wrapper">
-        <p>寒 雨 連 江 夜 入 吳</p>
-        <p>平 明 送 客 楚 山 孤</p>
-        <p>洛 陽 親 友 如 相 問</p>
-        <p>一 片 冰 心 在 玉 壺</p>
+        <p>機號933、空軍UH-60M黑鷹直升機從松山機場起飛，預計前往宜蘭東澳營區執行春節慰勉行程。</p>
       </div>
     </div>
     <div ref="content2" class="black-hawk__content">
       <div class="black-hawk__content__text-wrapper">
-        <p>閨 中 少 婦 不 知 愁 </p>
-        <p>春 日 凝 妝 上 翠 樓</p>
-        <p>忽 見 陌 頭 楊 柳 色</p>
-        <p>悔 教 夫 婿 覓 封 侯</p>
+        <p>飛行員失事前最後一次通聯。當時回報能見度7哩，雲高3000呎至5000呎，符合進場標準。</p>
+        <p>失事飛鷹光點在距中正港328.7度17浬處消失。</p>
       </div>
     </div>
     <div ref="content3" class="black-hawk__content">
       <div class="black-hawk__content__text-wrapper">
-        <p>閨 中 少 婦 不 知 愁 </p>
-        <p>春 日 凝 妝 上 翠 樓</p>
-        <p>忽 見 陌 頭 楊 柳 色</p>
-        <p>悔 教 夫 婿 覓 封 侯</p>
+        <p>10:30 軍聞社記者陳映竹用手機回報，被飛機殘骸壓住。</p>
+        <p>宜蘭搜救隊、新北搜救隊分別集結出動，朝桶後溪光點消失處搜救。</p>
       </div>
     </div>
     <div ref="content4" class="black-hawk__content black-hawk__content--last-child">
       <div class="black-hawk__content__text-wrapper">
-        <p>閨 中 少 婦 不 知 愁 </p>
-        <p>春 日 凝 妝 上 翠 樓</p>
-        <p>忽 見 陌 頭 楊 柳 色</p>
-        <p>悔 教 夫 婿 覓 封 侯</p>
+        <p>殘骸發現地。搜救隊回報5人生還、參謀總長沈一鳴等8人不幸罹難。</p>
       </div>
     </div>
   </div>
@@ -166,6 +156,8 @@ export default {
 .black-hawk__content__text-wrapper {
   position: relative;
   background-color: #ffffff;
+  padding: 40px 0;
+  border-radius: 5px;
 }
 .content1_img {
   position: absolute;
