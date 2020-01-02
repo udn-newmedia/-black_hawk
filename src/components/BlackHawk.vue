@@ -38,11 +38,11 @@
       }"
     />
     <div ref="content1" class="black-hawk__content black-hawk__content--first-child">
-      <img
+      <!-- <img
         ref="content1_img"
         class="content1_img" 
         :src="isMob ? 'https://udn.com/newmedia/cms_assets/black_hawk/imgs/mob_1.jpg' : 'https://udn.com/newmedia/cms_assets/black_hawk/imgs/Web_1.jpg'" alt=""
-      >
+      > -->
       <div class="black-hawk__content__text-wrapper">
         <p>機號933、空軍UH-60M黑鷹直升機從松山機場起飛，預計前往宜蘭東澳營區執行春節慰勉行程。</p>
       </div>
@@ -91,14 +91,14 @@ export default {
       const content_2 = this.$refs.content2.getBoundingClientRect();
       const content_3 = this.$refs.content3.getBoundingClientRect();
       const content_4 = this.$refs.content4.getBoundingClientRect();
-      const content1_img = this.$refs.content1_img
+      // const content1_img = this.$refs.content1_img
 
       if (content_1.top < 0 && content_1.bottom > 0) {
         this.contentEnterFlag[1] = true;
-        content1_img.style.display = "none";
+        // content1_img.style.display = "none";
       } else {
         this.contentEnterFlag[1] = false;
-        content1_img.style.display = "block";
+        // content1_img.style.display = "block";
       }
 
       if (content_2.top < window.innerHeight * 0.5 && content_2.bottom > 0) {
@@ -131,7 +131,14 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .black-hawk {
-  background-color: #dedede;
+  background-image: url('https://udn.com/newmedia/cms_assets/black_hawk/imgs/mob_1.jpg');
+  background-size: cover;
+}
+@media screen and (min-width: 769px) {
+  .black-hawk {
+    background-image: url('https://udn.com/newmedia/cms_assets/black_hawk/imgs/Web_1.jpg');
+    background-size: contain;
+  }
 }
 .black-hawk__backgound {
   pointer-events: none;
