@@ -28,7 +28,7 @@
       }"
       style="backgroundImage: url('https://udn.com/newmedia/cms_assets/black_hawk/imgs/Web_4.jpg')"
     />
-    <div ref="content1" class="black-hawk__content">
+    <div ref="content1" class="black-hawk__content black-hawk__content--first-child">
       <div class="black-hawk__content__text-wrapper">
         <p>寒 雨 連 江 夜 入 吳</p>
         <p>平 明 送 客 楚 山 孤</p>
@@ -52,7 +52,7 @@
         <p>悔 教 夫 婿 覓 封 侯</p>
       </div>
     </div>
-    <div ref="content4" class="black-hawk__content">
+    <div ref="content4" class="black-hawk__content black-hawk__content--last-child">
       <div class="black-hawk__content__text-wrapper">
         <p>閨 中 少 婦 不 知 愁 </p>
         <p>春 日 凝 妝 上 翠 樓</p>
@@ -89,19 +89,19 @@ export default {
         this.contentEnterFlag[1] = false;
       }
 
-      if (content_2.top < 0 && content_2.bottom > 0) {
+      if (content_2.top < window.innerHeight * 0.5 && content_2.bottom > 0) {
         this.contentEnterFlag[2] = true;
       } else {
         this.contentEnterFlag[2] = false;
       }
 
-      if (content_3.top < 0 && content_3.bottom > 0) {
+      if (content_3.top < window.innerHeight * 0.5 && content_3.bottom > 0) {
         this.contentEnterFlag[3] = true;
       } else {
         this.contentEnterFlag[3] = false;
       }
 
-      if (content_4.top < 0 && content_4.bottom > 0) {
+      if (content_4.top < window.innerHeight * 0.5 && content_4.bottom > 0) {
         this.contentEnterFlag[4] = true;
       } else {
         this.contentEnterFlag[4] = false;
@@ -136,7 +136,7 @@ export default {
   opacity: 1;
 }
 .black-hawk__content {
-  border: solid 1px red;
+  /* border: solid 1px red; */
   position: relative;
   width: 100%;
   height: 100vh;
@@ -144,13 +144,14 @@ export default {
   justify-content: center;
   align-items: center;
 }
-/* .black-hawk__content:first-child {
-  align-items: center;
+.black-hawk__content--first-child {
+  padding-top: 100vh;
+  align-items: flex-start;
 }
-.black-hawk__content:last-child {
-  margin-bottom: 50vh;
-  padding-bottom: 50vh;
-} */
+.black-hawk__content--last-child {
+  margin-bottom: 100vh;
+  align-items: flex-end;
+}
 .black-hawk__content__text-wrapper {
   position: relative;
   background-color: #ffffff;
